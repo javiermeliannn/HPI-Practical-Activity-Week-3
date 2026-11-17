@@ -57,14 +57,14 @@ def get_enrolled_student_indexes(grades_matrix: list[list], col_index: int) -> l
     Returns:
         list: A list with the indexes of the students who are enrolled in that subject    
     """
-    enrolled_indices = []
+    enrolled_indexes = []
     # The function goes over every row (student) of the matrix
     for idx in range(len(grades_matrix)):
         subject_tuple = grades_matrix[idx][col_index]
     # If the student is enrolled in the subject, it adds its index
         if subject_tuple != (-1, -1, -1):
-            enrolled_indices.append(idx)
-    return enrolled_indices
+            enrolled_indexes.append(idx)
+    return enrolled_indexes
 
 # Member 3 (Laura): Calculate the average of the 3 notes
 def calculate_subject_average(subject_tuple: tuple[float]) -> float:
@@ -105,8 +105,8 @@ def build_honor_roll(students: list, grades_matrix: list[list], col_index: int, 
     # Creates empty list which will include the honor roll students
     honor_list = []
     # Check each student enrolled in the subject
-    for idx in range(len(enrolled_indices)):
-        student_idx = enrolled_indices[idx]
+    for idx in range(len(enrolled_indexes)):
+        student_idx = enrolled_indexes[idx]
         # Get the student's grades for the selected subject
         subject_tuple = grades_matrix[student_idx][col_index]
         # Calculate the student's average grade
