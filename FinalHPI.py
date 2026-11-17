@@ -89,7 +89,7 @@ def calculate_subject_average(subject_tuple: tuple[float]) -> float:
 
 
 # Member 4 (Manuel): Build the Honor Roll list (subject average >= 8.0) from enrolled students
-def build_honor_roll(students: list, grades_matrix: list[list], col_index: int, enrolled_indices: list[int]):
+def build_honor_roll(students: list, grades_matrix: list[list], col_index: int, enrolled_indexes: list[int]):
     """
     Builds a list of enrolled students whose subject average is 8.0 or higher.
 
@@ -97,7 +97,7 @@ def build_honor_roll(students: list, grades_matrix: list[list], col_index: int, 
         students (list): List of all students.
         grades_matrix (list[list]): Matrix containing each student's subject grades.
         col_index (int): Index of the subject to evaluate.
-        enrolled_indices (list[int]): Indices of students enrolled in the subject.
+        enrolled_indexes (list[int]): Indexes of students enrolled in the subject.
 
     Returns:
         list: List of students who have an average grade of at least 8.0.
