@@ -39,14 +39,14 @@ def find_subject_column(subjects: list, target_subject: str) -> int:
     return -1  #  When we do not find the subject
 
 
-# Member 2 (Javier): Get row indices of students enrolled in that subject (sum of tuple > 0) 
+# Member 2 (Javier): Get row indices of students enrolled in that subject subject_tuple != (-1, -1, -1) 
 def get_enrolled_student_indexes(grades_matrix: list[list], col_index: int) -> list:
     """
     Receives a matrix of tuples of scores and the index of a column which corresponds to a
     subject and returns a list with the indexes of the students who are enrolled in that subject.
     Args:
         grades_matrix (list[list]): Matrix containing tuples of scores for each student and subject                
-        col_index (int): Index of the column corresponding to the target 
+        col_index (int): Index of the column corresponding to the target subject
     Returns:
         list: A list with the indexes of the students who are enrolled in that subject    
     """
