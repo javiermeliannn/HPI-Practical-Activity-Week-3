@@ -7,16 +7,9 @@ subjects = ["Math", "Physics", "Programming"]  # Columns
 # Each cell is a tuple containing 3 grades (e.g., (grade1, grade2, grade3))
 # If the student is not enrolled, it is represented as: (-1, -1, -1)
 grades_matrix = [
-    # Ana: Average in Programming = (8.5 + 8.5 + 8.5) / 3 = 8.5 -> Qualifies
     [(9.0, 9.0, 9.0), (8.0, 8.0, 8.0), (8.5, 8.5, 8.5)],
-    
-    # Luis: Not enrolled in Programming (-1, -1, -1)
     [(9.5, 9.5, 9.5), (9.0, 9.0, 9.0), (-1, -1, -1)],
-    
-    # Carlos: Average in Programming = (6.0 + 6.5 + 6.2) / 3 = 6.23 -> Below 8.0
     [(6.0, 6.0, 6.0), (7.0, 7.0, 7.0), (6.0, 6.5, 6.2)],
-    
-    # Elena: Average in Programming = (9.0 + 9.0 + 9.0) / 3 = 9.0 -> Qualifies
     [(8.0, 8.0, 8.0), (-1, -1, -1), (9.0, 9.0, 9.0)],
 ]
 
