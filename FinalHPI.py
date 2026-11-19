@@ -45,10 +45,10 @@ def get_enrolled_student_indexes(grades_matrix: list[list], col_index: int) -> l
     Receives a matrix of tuples of scores and the index of a column which corresponds to a
     subject and returns a list with the indexes of the students who are enrolled in that subject.
     Args:
-        grades_matrix (list[list]): Matrix containing tuples of scores for each student and subject                
+        grades_matrix (list[list]): Matrix containing tuples of scores for each student and subject
         col_index (int): Index of the column corresponding to the target subject
     Returns:
-        list: A list with the indexes of the students who are enrolled in that subject    
+        list: A list with the indexes of the students who are enrolled in that subject
     """
     enrolled_indexes = []
     # The function goes over every row (student) of the matrix
@@ -70,12 +70,12 @@ def calculate_subject_average(subject_tuple: tuple[float]) -> float:
     """
     total = 0.0
     count = 0
-    # Iterates through the entire tuple by index, checking if each value is greater than 0.0; if so, adds its value. 
+    # Iterates through the entire tuple by index, checking if each value is greater than 0.0; if so, adds its value.
     for idx in range(len(subject_tuple)):
         if subject_tuple[idx] >= 0.0:
             total += subject_tuple[idx]
             count += 1
-    # If there are no grades greater than 0.0, it directly returns 0. 
+    # If there are no grades greater than 0.0, it directly returns 0.
     if count == 0:
         return 0.0
     return total / count
