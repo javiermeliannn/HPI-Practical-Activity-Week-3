@@ -124,40 +124,23 @@ def print_honor_roll(target_subject: str, honor_list: list):
 # ==========================================
 
 
+
 def main_function(academic_data: tuple, target_subject: str) -> None:
-    """
-    Executes the complete Honor Roll process for a selected subject.
+    """Runs the Honor Roll process for the selected subject."""
 
-    Args:
-        academic_data (tuple): Contains the students list, subjects list and grades matrix.
-        target_subject (str): Name of the subject to evaluate.
-
-    Returns:
-        None
-    """
-
-    # Unpack the academic data into three separate variables
+    # Unpack the academic data
     students_list, subjects_list, matrix = academic_data
 
-    # Find the column index corresponding to the target subject
+    # Find the subject and process enrolled students
     col = find_subject_column(subjects_list, target_subject)
 
-    # Check if the selected subject exists
     if col != -1:
-
-        # Get the indices of students enrolled in the selected subject
         enrolled = get_enrolled_student_indexes(matrix, col)
-
-        # Build the Honor Roll list using the enrolled students
         final_honor_roll = build_honor_roll(
             students_list, matrix, col, enrolled
         )
-
-        # Print the final Honor Roll report
         print_honor_roll(target_subject, final_honor_roll)
-
     else:
-        # Display an error message if the subject does not exist
         print("Subject not found:", target_subject)
 
 
