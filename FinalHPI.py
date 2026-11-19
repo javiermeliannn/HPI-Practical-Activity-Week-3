@@ -72,7 +72,7 @@ def calculate_subject_average(subject_tuple: tuple[float]) -> float:
     count = 0
     # Iterates through the entire tuple by index, checking if each value is greater than 0.0; if so, adds its value. 
     for idx in range(len(subject_tuple)):
-        if subject_tuple[idx] > 0.0:
+        if subject_tuple[idx] >= 0.0:
             total += subject_tuple[idx]
             count += 1
     # If there are no grades greater than 0.0, it directly returns 0. 
